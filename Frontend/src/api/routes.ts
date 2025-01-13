@@ -10,4 +10,11 @@ export const ApiEndpoints = {
   login: "/auth/login/",
   register: "/auth/register/",
   perfil: "/profile/",
+  servicios: "/servicios/",
+  paquetes: "/paquetes/",
+  suscripcionPaquete: "/suscripciones/paquetes/",
+  suscripcionServicio: "/suscripciones/servicios/",
+  paquetesActivos: "/paquetes/activos/",
+  consumosPaquetes: "/consumos/paquetes/",
+  consumosServicios: "/consumos/servicios/"
 };

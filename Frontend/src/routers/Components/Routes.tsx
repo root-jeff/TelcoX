@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { HomePage } from "../../app/HomePage";
 import { TelcoDashboard } from "../../app/TelcolDashboadPage";
 import { ProfilePage } from "../../app/ProfilePage";
+import { PackageServiceDashboard } from "../../app/PaqueteServiciosDashboard";
 
 export interface DictionaryRoutes {
   nombre: string;
@@ -34,5 +35,10 @@ export const DictionaryRoutes: DictionaryRoutes[] = [
     nombre: "Perfil",
     path: "perfil",
     component: <ProfilePage />,
+  },
+  {
+    nombre: "PaqueteServicio",
+    path: "suscripciones",
+    component: <PackageServiceDashboard />,
   },
 ];

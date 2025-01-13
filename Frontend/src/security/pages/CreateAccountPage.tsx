@@ -142,7 +142,7 @@ export const CreateAccountPage = () => {
           severity: "success",
         });
         resetForm();
-        navigate("crear-cuenta");
+        navigate("/iniciar-sesion");
       })
       .catch(() =>
         Snack.open({

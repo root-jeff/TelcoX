@@ -1,5 +1,5 @@
 """
-URL configuration for Backend project.
+URL configuration for ApiTelcoX project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -19,6 +19,6 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path("api/auth/admin/", admin.site.urls),
+    path("admin/", admin.site.urls),
     path("", include("api.urls")),
 ]

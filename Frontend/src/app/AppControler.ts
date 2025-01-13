@@ -2,6 +2,7 @@
 import { createApi } from "@reduxjs/toolkit/query/react";
 import { ApiEndpoints, baseQuery } from "../api";
 import { UserDataProfile } from "./ProfilePage";
+import { IConsumos } from "./TelcolDashboadPage";
 
 // Define a service using a base URL and expected endpoints
 export const AppController = createApi({
@@ -27,5 +28,33 @@ export const AppController = createApi({
         body,
       }),
     }),
+    getConsumoServicio: query<IConsumos[], number>({
+      query: (idProfile) => ({
+        url: `${ApiEndpoints.consumosServicios}${idProfile}/`,
+        method: "GET",
+      }),
+    }),
+    
+    getConsumoPaquetes: query<IConsumos[], number>({
+      query: (idProfile) => ({
+        url: `${ApiEndpoints.consumosServicios}${idProfile}/`,
+        method: "GET",
+      }),
+    }),
+    getSuscrpPaquete: query<IConsumos[], number>({
+      query: (idProfile) => ({
+        url: `${ApiEndpoints.suscripcionPaquete}${idProfile}/`,
+        method: "GET",
+      }),
+    }),
+    getSuscrpServicios: query<IConsumos[], number>({
+      query: (idProfile) => ({
+        url: `${ApiEndpoints.suscripcionServicio}${idProfile}/`,
+        method: "GET",
+      }),
+    }),
+
+
+
   }),
 });

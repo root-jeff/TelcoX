@@ -7,19 +7,24 @@ TelcoX es una aplicación full-stack que incluye una API Backend desarrollada co
 ## Estructura del Proyecto
 
 ```
+
+
 TelcoX/
-├── Api/                        # Backend - Django Rest Framework
-│   ├── api/
-│   │   ├── management/
-│   │   │   ├── Commands.py     # Comandos para el manejo de espera de API
-│   │   ├── migrations/         # Alamcenamiento de migraciones
-│   │   ├── modelos/            # Modelos para la base de datos
-│   │   ├── serializers/        # Serializers para los modelos
-│   │   └── visas/              # Gestión de vistas
-│   ├── MySql/                  # Configuración de base de datos
-│   ├── telcox/                 # Configuración principal Django
-│   ├── DockerFile              # Configuración principal Docker
-│   └── entrypoint.sh           # Configuración de espera para API Docker
+├── ApiTelcoX/
+│   ├── api/           # Django App
+│   ├── ApiTelcoX/     # Archivos principales del proyecto Django
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   ├── wsgi.py
+│   │   ├── asgi.py
+│   ├── manage.py
+│   ├── requirements.txt
+│   ├── Dockerfile
+│   ├── entrypoint.sh
+│   ├── docker-compose.yml
+│   └── MySql/
+│       ├── data.sql
+│       └── Dockerfile
 │
 ├── Frontend/                   # Frontend - React + TypeScript
 │   ├── src/
