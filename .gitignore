@@ -16,13 +16,13 @@ lerna-debug.log*
 /frontend/dist-ssr/
 /frontend/*.local
 
-/api/.env/
+api/.env/
 /api/env/
 /env
 
 # Archivos de entorno
-.env
-.env.*
+#.env
+#.env.*
 
 # Archivos específicos de Django (API)
 *.pyc

@@ -70,7 +70,7 @@ Asegúrate de tener instalados los siguientes requisitos:
 La API estará disponible en `http://localhost:8000`. Para configurarla y levantarla:
 
 ```bash
-cd Api
+cd ApiTelcoX
 docker-compose up --build
 ```
 
