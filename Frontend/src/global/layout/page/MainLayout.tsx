@@ -65,7 +65,7 @@ export const MainLayout = () => {
             >
               <img
                 src={logoAzul}
-                alt={"Citi-Customs Logo"}
+                alt={"Logo"}
                 style={{
                   width: "70%",
                   objectFit: "contain",
