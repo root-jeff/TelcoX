@@ -1,0 +1,50 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Ignorar node_modules en el frontend
+/frontend/node_modules/
+
+# Ignorar build y distribución en el frontend
+/frontend/dist/
+/frontend/dist.zip
+/frontend/dist-ssr/
+/frontend/*.local
+
+/api/.env/
+/api/env/
+/env
+
+# Archivos de entorno
+.env
+.env.*
+
+# Archivos específicos de Django (API)
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+db.sqlite3
+media/
+static/
+
+# Directorios y archivos de los editores
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Archivos y directorios temporales
+*.bak
+*.swp
+*.swo

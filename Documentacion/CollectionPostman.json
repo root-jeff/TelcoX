@@ -1,0 +1,482 @@
+{
+    "info": {
+      "name": "TelcoX API",
+      "description": "Workspace para las rutas de la API de TelcoX",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Authentication",
+        "item": [
+          {
+            "name": "Login",
+            "request": {
+              "method": "POST",
+              "url": {
+                "raw": "http://localhost:8000/api/auth/login/",
+                "host": [
+                  "http://localhost"
+                ],
+                "port": "8000",
+                "path": [
+                  "api",
+                  "auth",
+                  "login"
+                ]
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "description": "Tipo de contenido"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\"username\": \"your_username\", \"password\": \"your_password\"}"
+              }
+            }
+          },
+          {
+            "name": "Register",
+            "request": {
+              "method": "POST",
+              "url": {
+                "raw": "http://localhost:8000/api/auth/register/",
+                "host": [
+                  "http://localhost"
+                ],
+                "port": "8000",
+                "path": [
+                  "api",
+                  "auth",
+                  "register"
+                ]
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "description": "Tipo de contenido"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\"username\": \"new_user\", \"password\": \"new_password\", \"email\": \"user@example.com\"}"
+              }
+            }
+          },
+          {
+            "name": "Logout",
+            "request": {
+              "method": "POST",
+              "url": {
+                "raw": "http://localhost:8000/api/auth/logout/",
+                "host": [
+                  "http://localhost"
+                ],
+                "port": "8000",
+                "path": [
+                  "api",
+                  "auth",
+                  "logout"
+                ]
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "description": "Tipo de contenido"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Users",
+        "item": [
+          {
+            "name": "Get Users",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:8000/api/users/",
+                "host": [
+                  "http://localhost"
+                ],
+                "port": "8000",
+                "path": [
+                  "api",
+                  "users"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Get User Profile",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:8000/api/profile/1/",
+                "host": [
+                  "http://localhost"
+                ],
+                "port": "8000",
+                "path": [
+                  "api",
+                  "profile",
+                  "1"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Paquetes",
+        "item": [
+          {
+            "name": "Get Paquetes",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:8000/api/paquetes/",
+                "host": [
+                  "http://localhost"
+                ],
+                "port": "8000",
+                "path": [
+                  "api",
+                  "paquetes"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Get Paquete by ID",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:8000/api/paquetes/1/",
+                "host": [
+                  "http://localhost"
+                ],
+                "port": "8000",
+                "path": [
+                  "api",
+                  "paquetes",
+                  "1"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Create Paquete",
+            "request": {
+              "method": "POST",
+              "url": {
+                "raw": "http://localhost:8000/api/paquetes/",
+                "host": [
+                  "http://localhost"
+                ],
+                "port": "8000",
+                "path": [
+                  "api",
+                  "paquetes"
+                ]
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "description": "Tipo de contenido"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\"nombre\": \"Paquete 1\", \"descripcion\": \"Descripción del paquete\", \"precio\": 100}"
+              }
+            }
+          },
+          {
+            "name": "Paquete Drop List",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:8000/api/paquetes/drop/",
+                "host": [
+                  "http://localhost"
+                ],
+                "port": "8000",
+                "path": [
+                  "api",
+                  "paquetes",
+                  "drop"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Get Active Paquetes by Usuario ID",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:8000/api/paquetes/activos/1/",
+                "host": [
+                  "http://localhost"
+                ],
+                "port": "8000",
+                "path": [
+                  "api",
+                  "paquetes",
+                  "activos",
+                  "1"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Suscripciones Paquetes",
+        "item": [
+          {
+            "name": "Create Suscripcion Paquete",
+            "request": {
+              "method": "POST",
+              "url": {
+                "raw": "http://localhost:8000/suscripciones/paquetes/",
+                "host": [
+                  "http://localhost"
+                ],
+                "port": "8000",
+                "path": [
+                  "suscripciones",
+                  "paquetes"
+                ]
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "description": "Tipo de contenido"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\"paquete_id\": 1, \"usuario_id\": 2, \"fecha_inicio\": \"2025-01-01\", \"fecha_fin\": \"2025-12-31\"}"
+              }
+            }
+          },
+          {
+            "name": "Get Suscripcion Paquete by ID",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:8000/suscripciones/paquetes/1/",
+                "host": [
+                  "http://localhost"
+                ],
+                "port": "8000",
+                "path": [
+                  "suscripciones",
+                  "paquetes",
+                  "1"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Consumos Paquetes",
+        "item": [
+          {
+            "name": "Create Consumo Paquete",
+            "request": {
+              "method": "POST",
+              "url": {
+                "raw": "http://localhost:8000/consumos/paquetes/",
+                "host": [
+                  "http://localhost"
+                ],
+                "port": "8000",
+                "path": [
+                  "consumos",
+                  "paquetes"
+                ]
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "description": "Tipo de contenido"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\"paquete_id\": 1, \"usuario_id\": 2, \"consumo\": 10}"
+              }
+            }
+          },
+          {
+            "name": "Get Consumo Paquete by ID",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:8000/consumos/paquetes/1/",
+                "host": [
+                  "http://localhost"
+                ],
+                "port": "8000",
+                "path": [
+                  "consumos",
+                  "paquetes",
+                  "1"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Servicios",
+        "item": [
+          {
+            "name": "Get Servicios",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:8000/api/servicios/",
+                "host": [
+                  "http://localhost"
+                ],
+                "port": "8000",
+                "path": [
+                  "api",
+                  "servicios"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Get Servicio by ID",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:8000/api/servicios/1/",
+                "host": [
+                  "http://localhost"
+                ],
+                "port": "8000",
+                "path": [
+                  "api",
+                  "servicios",
+                  "1"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Create Servicio",
+            "request": {
+              "method": "POST",
+              "url": {
+                "raw": "http://localhost:8000/api/servicios/",
+                "host": [
+                  "http://localhost"
+                ],
+                "port": "8000",
+                "path": [
+                  "api",
+                  "servicios"
+                ]
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "description": "Tipo de contenido"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\"nombre\": \"Servicio 1\", \"descripcion\": \"Descripción del servicio\", \"precio\": 200}"
+              }
+            }
+          },
+          {
+            "name": "Servicio Drop List",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:8000/api/servicios/drop/",
+                "host": [
+                  "http://localhost"
+                ],
+                "port": "8000",
+                "path": [
+                  "api",
+                  "servicios",
+                  "drop"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Suscripciones Servicios",
+        "item": [
+          {
+            "name": "Create Suscripcion Servicio",
+            "request": {
+              "method": "POST",
+              "url": {
+                "raw": "http://localhost:8000/suscripciones/servicios/",
+                "host": [
+                  "http://localhost"
+                ],
+                "port": "8000",
+                "path": [
+                  "suscripciones",
+                  "servicios"
+                ]
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "description": "Tipo de contenido"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\"servicio_id\": 1, \"usuario_id\": 2, \"fecha_inicio\": \"2025-01-01\", \"fecha_fin\": \"2025-12-31\"}"
+              }
+            }
+          },
+          {
+            "name": "Get Suscripcion Servicio by ID",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "http://localhost:8000/suscripciones/servicios/1/",
+                "host": [
+                  "http://localhost"
+                ],
+                "port": "8000",
+                "path": [
+                  "suscripciones",
+                  "servicios",
+                  "1"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+  
